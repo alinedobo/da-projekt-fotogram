@@ -81,7 +81,7 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 3dvw;
+    gap: 24px;
     background-color: #09212A;
     padding: 20px 20px;
 
@@ -98,6 +98,7 @@ footer {
 
 main {
     width: 100%;
+    height: (100dvh - 216px);
     display: flex;
     flex-direction: column;
     align-items: center;
