@@ -21,7 +21,7 @@ function render(){
     for (i = 0; i < arrPhotos.length; i++){
         contentRef.innerHTML += /*html*/`
             <div class="photo-preview">
-                <img src="./assets/images/{$arrPhotos[i]}" alt="photo of Loki">
+                <img src="./assets/images/${arrPhotos[i]}" alt="photo of Loki">
             </div>
         `
     }
