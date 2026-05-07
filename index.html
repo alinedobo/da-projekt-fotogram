@@ -1,29 +1,45 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lokigram</title>
-    <link rel="icon" href="./assets/icons/fotogram-logo.svg" type="image/x-icon">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Lokigram</title>
+        <link
+            rel="icon"
+            href="./assets/icons/fotogram-logo.svg"
+            type="image/x-icon"
+        />
 
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+        <link rel="stylesheet" href="style.css" />
+        <script src="script.js" defer></script>
+    </head>
+    <body onload="render()">
+        <header>
+            <img src="./assets/icons/fotogram-logo.svg" alt="fotogram logo" />
+            <p>Lokigram</p>
+        </header>
 
-</head>
-<body onload="render()">
-    <header>
-<img src="./assets/icons/fotogram-logo.svg" alt="fotogram logo">
-<p>Lokigram</p>
-    </header>
-    <main>
-        <h1>Loki through the years</h1>
-        <div id="content">
+        <main>
+            <h1>Loki through the years</h1>
+            <div id="content"></div>
 
-        </div>
-    </main>
-    <footer>
-<img src="./assets/icons/da-logo.svg" alt="developer akademie logo">
-<p>© 2026 Developer Akademie GmbH</p>
-    </footer>    
-</body>
+            <dialog id="photo-popup">
+                <div id="popup-container">
+                    <header class="dialog-content" id="header">test</header>
+                    <section class="dialog-content" id="section">test</section>
+                    <footer class="dialog-content" id="footer">
+                        <button onclick="closePopupWindow()">CLOSE</button>
+                    </footer>
+                </div>
+            </dialog>
+        </main>
+
+        <footer>
+            <img
+                src="./assets/icons/da-logo.svg"
+                alt="developer akademie logo"
+            />
+            <p>© 2026 Developer Akademie GmbH</p>
+        </footer>
+    </body>
 </html>
