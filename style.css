@@ -156,25 +156,26 @@ main {
     width: 80dvw;
     max-width: 500px;
     height: 80dvh;
-    max-height: 700px;
-    border: 5px solid red;
-    background-color: #09212A;
+    max-height: 800px;
+    background-color: #09212a;
     color: white;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 24px;
 
     .dialog-content {
         width: 100%;
-        background-color: #09212A;
+        background-color: #09212a;
         color: white;
-        border: 1px solid white;
         padding: 24px;
     }
 
     #photo-popup[open]::backdrop {
         background-color: black;
+    }
+
+    .full-picture {
+        height: 100%;
     }
 }

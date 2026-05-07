@@ -33,7 +33,7 @@ function render() {
     for (i = 0; i < arrPhotos.length; i++) {
         contentRef.innerHTML += /*html*/ `
             <div class="photo-preview">
-                <img src="./assets/images/${arrPhotos[i]}.jpg" alt="photo of Loki in ${arrPhotos[i]}" onclick="showFullPicture()">
+                <img src="./assets/images/${arrPhotos[i]}.jpg" alt="photo of Loki in ${arrPhotos[i]}" onclick="showFullPicture(${i})">
     </div>
         `;
     }
@@ -41,9 +41,25 @@ function render() {
 
 const dialogRef = document.getElementById("photo-popup");
 
-function showFullPicture() {
+let headerRef = document.getElementById("header");
+let sectionRef = document.getElementById("section");
+let footerRef = document.getElementById("footer");
+
+
+function showFullPicture(index) {
     dialogRef.showModal();
+
+    headerRef.innerHTML = /*html*/`
+        <p class="year">${arrPhotos[index]}</p>
+    `
+
+    sectionRef.innerHTML = /*html*/`
+        <div class="full-picture">
+            <img src="./assets/images/${arrPhotos[index]}.jpg" alt="photo of Loki in ${arrPhotos[index]}">
+        </div>
+    `
 }
+
 
 function closePopupWindow() {
     dialogRef.close();
