@@ -49,11 +49,19 @@ function showFullPicture(index) {
     `;
 }
 
-function goToPreviousPhoto(jindex) {
-    if(jindex === 0){
+function goToPreviousPhoto(index) {
+    if(index === 0){
        showFullPicture(arrPhotos.length-1);
     } else {
-        showFullPicture(jindex-1);
+        showFullPicture(index-1);
+    }
+}
+
+function goToNextPhoto(index) {
+    if(index === arrPhotos.length-1){
+       showFullPicture(0);
+    } else {
+        showFullPicture(index+1);
     }
 }
 
