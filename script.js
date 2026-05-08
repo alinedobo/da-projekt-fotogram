@@ -27,32 +27,34 @@ function render() {
 }
 
 const dialogRef = document.getElementById("photo-popup");
-const headerRef = document.getElementById("header");
-const yearRef = document.getElementById("year");
-const sectionRef = document.getElementById("section");
-const footerRef = document.getElementById("footer");
-const counterRef = document.getElementById("slide-counter");
 
 function showFullPicture(index) {
     dialogRef.showModal();
 
-    yearRef.innerHTML = /*html*/ `
-        ${arrPhotos[index]}
-    `;
-
-    sectionRef.innerHTML = /*html*/ `
-        <div class="full-picture">
+    dialogRef.innerHTML = /*html*/ `
+     <div id="popup-container">
+        <header id="dialog-header">
+            <p id="year">${arrPhotos[index]}</p>
+            <button id="close-button" onclick="closePopupWindow()"><img src="./assets/icons/close-button.svg" alt="close button"></button>
+        </header>
+        <section id="dialog-content">
             <img src="./assets/images/${arrPhotos[index]}.jpg" alt="photo of Loki in ${arrPhotos[index]}">
-        </div>
-    `;
-
-    counterRef.innerHTML = /*html*/ `
-    ${index+1}/${arrPhotos.length}
+        </section>
+        <footer id="dialog-footer">
+            <button id="previous-photo" onclick="goToPreviousPhoto(${index})"><img src="./assets/icons/Arrow-left.svg" alt="arrow to the left icon"></button>
+            <p id="slide-counter">${index + 1}/${arrPhotos.length}</p>
+            <button id="next-photo" onclick="goToNextPhoto(${index})"><img src="./assets/icons/Arrow-Right.svg" alt="arrow to the right icon"></button>
+        </footer>
+    </div>
     `;
 }
 
-function goToPreviousPhoto(){
-
+function goToPreviousPhoto(jindex) {
+    if(jindex === 0){
+       showFullPicture(arrPhotos.length-1);
+    } else {
+        showFullPicture(jindex-1);
+    }
 }
 
 function closePopupWindow() {

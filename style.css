@@ -169,11 +169,13 @@ main {
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
+        padding: 8px;
 
-        header {
+        #dialog-header{
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 12px 24px;
 
             button {
                 height: 32px;
@@ -186,7 +188,7 @@ main {
             }
         }
 
-        .dialog-content {
+        #dialog-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -195,9 +197,7 @@ main {
             background-color: #09212a;
             color: white;
             padding: 12px 24px;
-        }
 
-        .full-picture {
             height: 400px;
 
             @media screen AND (max-width: 768px) {
@@ -212,13 +212,14 @@ main {
             }
         }
 
-        footer {
+        #dialog-footer {
             width: 100%;
             height: auto;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
+            padding: 12px 24px;
         }
     }
 }
