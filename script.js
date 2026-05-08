@@ -48,9 +48,6 @@ function showFullPicture(index) {
         </footer>
     </div>
     `;
-
-    document.documentElement.style.overflow = "hidden";
-    document.body.scroll = "no";
 }
 
 function goToPreviousPhoto(index) {
@@ -71,7 +68,4 @@ function goToNextPhoto(index) {
 
 function closePopupWindow() {
     dialogRef.close();
-
-    document.documentElement.style.overflow = "scroll";
-    document.body.scroll = "yes";
 }
