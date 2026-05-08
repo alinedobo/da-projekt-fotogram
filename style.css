@@ -157,7 +157,6 @@ main {
     margin-top: 10dvh;
     border-radius: 12px;
     position: fixed;
-    
 
     #popup-container {
         width: 90dvw;
@@ -171,8 +170,28 @@ main {
         justify-content: space-between;
         align-items: center;
 
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            button {
+                height: 32px;
+                width: 32px;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+        }
+
         .dialog-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             width: 100%;
+            height: 100%;
             background-color: #09212a;
             color: white;
             padding: 12px 24px;
@@ -191,6 +210,15 @@ main {
                 object-fit: contain;
                 align-content: center;
             }
+        }
+
+        footer{
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
         }
     }
 }

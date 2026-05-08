@@ -27,23 +27,32 @@ function render() {
 }
 
 const dialogRef = document.getElementById("photo-popup");
-
-let headerRef = document.getElementById("header");
-let sectionRef = document.getElementById("section");
-let footerRef = document.getElementById("footer");
+const headerRef = document.getElementById("header");
+const yearRef = document.getElementById("year");
+const sectionRef = document.getElementById("section");
+const footerRef = document.getElementById("footer");
+const counterRef = document.getElementById("slide-counter");
 
 function showFullPicture(index) {
     dialogRef.showModal();
 
-    headerRef.innerHTML = /*html*/`
-        <p class="year">${arrPhotos[index]}</p>
-    `
+    yearRef.innerHTML = /*html*/ `
+        ${arrPhotos[index]}
+    `;
 
-    sectionRef.innerHTML = /*html*/`
+    sectionRef.innerHTML = /*html*/ `
         <div class="full-picture">
             <img src="./assets/images/${arrPhotos[index]}.jpg" alt="photo of Loki in ${arrPhotos[index]}">
         </div>
-    `
+    `;
+
+    counterRef.innerHTML = /*html*/ `
+    ${index+1}/${arrPhotos.length}
+    `;
+}
+
+function goToPreviousPhoto(){
+
 }
 
 function closePopupWindow() {

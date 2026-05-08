@@ -25,10 +25,17 @@
 
             <dialog id="photo-popup">
                 <div id="popup-container">
-                    <header class="dialog-content" id="header"></header>
-                    <section class="dialog-content" id="section"></section>
+                    <header class="dialog-content" id="header">
+                        <p id="year"></p>
+                        <button id="close-button" onclick="closePopupWindow()"><img src="./assets/icons/close-button.svg" alt="close button"></button>
+                    </header>
+                    <section class="dialog-content" id="section">
+                        
+                    </section>
                     <footer class="dialog-content" id="footer">
-                        <button onclick="closePopupWindow()">CLOSE</button>
+                        <button id="previous-photo" onclick="goToPreviousPhoto()"><img src="./assets/icons/Arrow-left.svg" alt="arrow to the left icon"></button>
+                        <p id="slide-counter"></p>
+                        <button id="next-photo"><img src="./assets/icons/Arrow-Right.svg" alt="arrow to the right icon"></button>
                     </footer>
                 </div>
             </dialog>
