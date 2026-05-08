@@ -126,7 +126,7 @@ main {
     #content {
         width: 100%;
         /* background-color: white; */
-        background-color: #06171e;
+        background-color: rgb(6, 23, 30);
         display: flex;
         flex-wrap: wrap;
         align-items: flex-start;
@@ -154,17 +154,17 @@ main {
 
 #photo-popup {
     margin: auto;
-
-    #photo-popup[open]::backdrop {
-        background-color: white;
-    }
+    margin-top: 10dvh;
+    border-radius: 12px;
+    position: fixed;
+    
 
     #popup-container {
         width: 90dvw;
         max-width: 400px;
         height: 75dvh;
         max-height: 600px;
-        background-color: #09212a;
+        background-color: rgb(9, 33, 42);
         color: white;
         display: flex;
         flex-direction: column;
@@ -193,4 +193,8 @@ main {
             }
         }
     }
+}
+
+#photo-popup[open]::backdrop {
+    background-color: rgb(6, 23, 30, 0.9);
 }
