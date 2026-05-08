@@ -69,3 +69,12 @@ function goToNextPhoto(index) {
 function closePopupWindow() {
     dialogRef.close();
 }
+
+
+/* // Detect clicks outside the modal to close it
+document.addEventListener('click', (e) => {
+  // Check if the clicked element is OUTSIDE the modal
+  if (!e.target.closest('#modal')) { 
+    closeModal();
+  }
+}); */
