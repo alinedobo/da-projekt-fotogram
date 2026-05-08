@@ -12,19 +12,6 @@ const arrPhotos = [
     "2024",
     "2025",
     "2026",
-    /*     "2013.jpg",
-    "2014.jpg",
-    "2015.jpg",
-    "2016.jpg",
-    "2017.jpg",
-    "2018.jpg",
-    "2019.jpg",
-    "2020.jpg",
-    "2022.jpg",
-    "2023.jpg",
-    "2024.jpg",
-    "2025.jpg",
-    "2026.jpg", */
 ];
 
 function render() {
@@ -45,7 +32,6 @@ let headerRef = document.getElementById("header");
 let sectionRef = document.getElementById("section");
 let footerRef = document.getElementById("footer");
 
-
 function showFullPicture(index) {
     dialogRef.showModal();
 
@@ -59,7 +45,6 @@ function showFullPicture(index) {
         </div>
     `
 }
-
 
 function closePopupWindow() {
     dialogRef.close();
