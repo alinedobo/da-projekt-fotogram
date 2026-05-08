@@ -92,7 +92,7 @@ footer {
 
     p {
         color: #99acb3;
-        font-size: clamp(0.75rem, 1.5dvw, 1rem);
+        font-size: 1rem;
         font-family: figtree;
     }
 }
