@@ -15,9 +15,9 @@ const arrPhotos = [
 ];
 
 function render() {
-    let contentRef = document.getElementById("content");
+    const contentRef = document.getElementById("content");
 
-    for (i = 0; i < arrPhotos.length; i++) {
+    for (let i = 0; i < arrPhotos.length; i++) {
         contentRef.innerHTML += /*html*/ `
             <div class="photo-preview">
                 <img src="./assets/images/${arrPhotos[i]}.jpg" alt="photo of Loki in ${arrPhotos[i]}" onclick="showFullPicture(${i})">
@@ -47,24 +47,30 @@ function showFullPicture(index) {
         </footer>
     </div>
     `;
+
+    document.documentElement.style.overflow = "hidden";
+    document.body.scroll = "no";
 }
 
 function goToPreviousPhoto(index) {
-    if(index === 0){
-       showFullPicture(arrPhotos.length-1);
+    if (index === 0) {
+        showFullPicture(arrPhotos.length - 1);
     } else {
-        showFullPicture(index-1);
+        showFullPicture(index - 1);
     }
 }
 
 function goToNextPhoto(index) {
-    if(index === arrPhotos.length-1){
-       showFullPicture(0);
+    if (index === arrPhotos.length - 1) {
+        showFullPicture(0);
     } else {
-        showFullPicture(index+1);
+        showFullPicture(index + 1);
     }
 }
 
 function closePopupWindow() {
     dialogRef.close();
+
+    document.documentElement.style.overflow = "scroll";
+    document.body.scroll = "yes";
 }
